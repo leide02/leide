@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100%;
+
+        }
+        .resultado{
+            background-color: #d68d8d;
+            color: white;
+            border: 1px solid rgb(227, 143, 143);
+            border-bottom: none;
+            padding: 30px;
+            font-size: 20px;
+            text-align: right;
+            width: 300px;
+            margin: 0 auto;
+        }
+        .operacoes {
+            width: 361px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .actions{
+            width: 90px;
+            border: 1px solid rgb(55, 19, 19);
+            text-align: center;
+            cursor: pointer;
+            border-radius: 1px;
+        }
+
+        .numeros {
+            width: 360px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .numbers {
+            width: 89px;
+            border: 1px solid rgb(201, 0, 0);
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+           <div>
+            <div class="resultado" id="resultado"></div>
+            <div class="operacoes">
+                <div  class="actions"  id="soma"  onclick="show('+')">+</div>
+                <div  class="actions"  id="divisao"onclick="show('/')">/</div>
+                <div  class="actions"  id="subtracao"  onclick="show('-')">-</div>
+                <div  class="actions"  id="mutiplicacao" onclick="show('*')">*</div>
+            </div>
+        </div>
+        <div class="numeros">
+            <div>
+            <div  class="numbers"  id="btn"  onclick="show('7')">7</div>
+            <div  class="numbers"  onclick="show('8')">8</div>
+            <div  class="numbers"  id="btn"  onclick="show('9')">9</div>
+            </div>
+            <div>
+                <div  class="numbers"  id="btn"  onclick="show('4')">4</div>
+                <div  class="numbers"  id="btn"  onclick="show('5')">5</div>
+                <div  class="numbers"  id="btn"  onclick="show('6')">6</div>
+            </div>
+            <div>
+                <div  class="numbers"  id="btn"  onclick="show('1')">1</div>
+                <div  class="numbers"  id="btn"  onclick="show('2')">2</div>
+                <div  class="numbers"  id="btn"  onclick="show('3')">3</div>
+            </div>
+            <div>
+                <div  class="numbers"  id="btn"  onclick="show('0')">0</div>
+                <div  class="numbers"  id="btn"  onclick="limpar()">ac</div>
+                <div  class="numbers"  id="btn"  onclick="resposta()">=</div>
+            </div>
+        </div>
+    </div>
+     <script>
+       
+      
+
+       function resposta(){
+            const resultado = document.getElementById('resultado')
+            const expressaoDaCalculadora = resultado.innerHTML
+            const valor = eval(expressaoDaCalculadora)
+            resultado.innerHTML = valor
+
+           console.log(valor)
+       }
+        resultado = eval(resultado);{
+        Text.innerHTML = (resultado)
+        }
+
+        function limpar( ){
+            const resultado = document.getElementById("resultado")
+            resultado.innerHTML = ""
+        } 
+
+        function show(value){
+            const resultado = document.getElementById("resultado")
+    
+            resultado.innerHTML = resultado.innerHTML + value
+        }
+         
+        
+     </script>
+</body>
+
+</html>
